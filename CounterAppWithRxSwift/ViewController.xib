@@ -17,9 +17,52 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlR-gy-s4r">
+                    <rect key="frame" x="177" y="294" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hlR-gy-s4r" secondAttribute="height" multiplier="2:1" id="RBM-vT-qnE"/>
+                        <constraint firstAttribute="height" constant="30" id="nuV-d1-qce"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AF-pH-tYQ">
+                    <rect key="frame" x="153" y="384" width="108" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4AF-pH-tYQ" secondAttribute="height" multiplier="18:5" id="hgQ-Cf-Brj"/>
+                    </constraints>
+                    <state key="normal" title="カウントアップ"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpJ-RC-pN9">
+                    <rect key="frame" x="153" y="436" width="108" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QpJ-RC-pN9" secondAttribute="height" multiplier="18:5" id="kUz-Te-2eP"/>
+                    </constraints>
+                    <state key="normal" title="カウントダウン"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cu5-T3-yei">
+                    <rect key="frame" x="176" y="488" width="62" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Cu5-T3-yei" secondAttribute="height" multiplier="31:15" id="i5z-2v-UtJ"/>
+                    </constraints>
+                    <state key="normal" title="リセット"/>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <point key="canvasLocation" x="139" y="135"/>
+            <constraints>
+                <constraint firstItem="QpJ-RC-pN9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0ul-GR-aLO"/>
+                <constraint firstItem="hlR-gy-s4r" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="250" id="D5B-3h-2KE"/>
+                <constraint firstItem="QpJ-RC-pN9" firstAttribute="top" secondItem="4AF-pH-tYQ" secondAttribute="bottom" constant="22" id="JLD-9N-wTn"/>
+                <constraint firstItem="Cu5-T3-yei" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UMc-Sa-dy1"/>
+                <constraint firstItem="Cu5-T3-yei" firstAttribute="top" secondItem="QpJ-RC-pN9" secondAttribute="bottom" constant="22" id="Y4o-w2-QSW"/>
+                <constraint firstItem="4AF-pH-tYQ" firstAttribute="top" secondItem="hlR-gy-s4r" secondAttribute="bottom" constant="60" id="en2-3g-MUF"/>
+                <constraint firstItem="hlR-gy-s4r" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jcw-I9-jc4"/>
+                <constraint firstItem="4AF-pH-tYQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pvu-xQ-Vr8"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
         </view>
     </objects>
 </document>
