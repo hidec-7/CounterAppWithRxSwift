@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="CounterAppWithRxSwift" customModuleProvider="target">
             <connections>
+                <outlet property="countLabel" destination="hlR-gy-s4r" id="qsS-EN-kmg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Ffl-Qc-1zh"/>
             </connections>
         </placeholder>
@@ -34,6 +35,9 @@
                         <constraint firstAttribute="width" secondItem="4AF-pH-tYQ" secondAttribute="height" multiplier="18:5" id="hgQ-Cf-Brj"/>
                     </constraints>
                     <state key="normal" title="カウントアップ"/>
+                    <connections>
+                        <action selector="countUpButton:" destination="-1" eventType="touchUpInside" id="i1d-kh-LQe"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpJ-RC-pN9">
                     <rect key="frame" x="153" y="436" width="108" height="30"/>
@@ -41,6 +45,9 @@
                         <constraint firstAttribute="width" secondItem="QpJ-RC-pN9" secondAttribute="height" multiplier="18:5" id="kUz-Te-2eP"/>
                     </constraints>
                     <state key="normal" title="カウントダウン"/>
+                    <connections>
+                        <action selector="countDownButton:" destination="-1" eventType="touchUpInside" id="ccy-wi-Qhm"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cu5-T3-yei">
                     <rect key="frame" x="176" y="488" width="62" height="30"/>
@@ -48,6 +55,9 @@
                         <constraint firstAttribute="width" secondItem="Cu5-T3-yei" secondAttribute="height" multiplier="31:15" id="i5z-2v-UtJ"/>
                     </constraints>
                     <state key="normal" title="リセット"/>
+                    <connections>
+                        <action selector="countResetButton:" destination="-1" eventType="touchUpInside" id="AIs-SG-4wH"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
