@@ -16,7 +16,6 @@
 		5DD9A1772667AFCA00B0619F /* CounterAppWithRxSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD9A1762667AFCA00B0619F /* CounterAppWithRxSwiftUITests.swift */; };
 		5DD9A1852667B2F500B0619F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DD9A1842667B2F500B0619F /* ViewController.xib */; };
 		5DD9A18A2667BDC700B0619F /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD9A1892667BDC700B0619F /* CounterViewModel.swift */; };
-		5DD9A18D2667C20E00B0619F /* CounterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD9A18C2667C20E00B0619F /* CounterPresenter.swift */; };
 		890FCE12185BB20E26891CC6 /* Pods_CounterAppWithRxSwift_CounterAppWithRxSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD256F2BE96AD89042E44C7 /* Pods_CounterAppWithRxSwift_CounterAppWithRxSwiftUITests.framework */; };
 		C79C66B997CD6B52FB2BA270 /* Pods_CounterAppWithRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C355317E8141AFBBA8D947 /* Pods_CounterAppWithRxSwift.framework */; };
 		DCFB1F9CE4AAEF8342D840D4 /* Pods_CounterAppWithRxSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D71120F8C85A7B9B22FC56 /* Pods_CounterAppWithRxSwiftTests.framework */; };
@@ -58,7 +57,6 @@
 		5DD9A1782667AFCA00B0619F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DD9A1842667B2F500B0619F /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		5DD9A1892667BDC700B0619F /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
-		5DD9A18C2667C20E00B0619F /* CounterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterPresenter.swift; sourceTree = "<group>"; };
 		72FCC967C29C756CCD6D26A8 /* Pods-CounterAppWithRxSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterAppWithRxSwiftTests.release.xcconfig"; path = "Target Support Files/Pods-CounterAppWithRxSwiftTests/Pods-CounterAppWithRxSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B1CADB657FD46B404D4D834 /* Pods-CounterAppWithRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterAppWithRxSwift.release.xcconfig"; path = "Target Support Files/Pods-CounterAppWithRxSwift/Pods-CounterAppWithRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		9DD256F2BE96AD89042E44C7 /* Pods_CounterAppWithRxSwift_CounterAppWithRxSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CounterAppWithRxSwift_CounterAppWithRxSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +141,6 @@
 		5DD9A1532667AFBF00B0619F /* CounterAppWithRxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				5DD9A18B2667C1EC00B0619F /* Presenter */,
 				5DD9A1872667BD6400B0619F /* ViewModel */,
 				5DD9A1862667BD5600B0619F /* ViewController */,
 				5DD9A1882667BD9400B0619F /* Views */,
@@ -196,14 +193,6 @@
 				5DD9A1842667B2F500B0619F /* ViewController.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		5DD9A18B2667C1EC00B0619F /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				5DD9A18C2667C20E00B0619F /* CounterPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,7 +433,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DD9A18D2667C20E00B0619F /* CounterPresenter.swift in Sources */,
 				5DD9A1592667AFBF00B0619F /* ViewController.swift in Sources */,
 				5DD9A18A2667BDC700B0619F /* CounterViewModel.swift in Sources */,
 				5DD9A1552667AFBF00B0619F /* AppDelegate.swift in Sources */,

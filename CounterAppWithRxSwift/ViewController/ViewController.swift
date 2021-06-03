@@ -5,36 +5,37 @@
 //  Created by hideto c. on 2021/06/02.
 //
 
+
+import RxSwift
+import RxCocoa
 import UIKit
 
 class ViewController: UIViewController {
     
-    private let presenter = CounterPresenter()
-
+    private let disposeBag = DisposeBag()
+    private var viewModel: CounterViewModel!
+    
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var countUpButton: UIButton!
+    @IBOutlet weak var countDownButton: UIButton!
+    @IBOutlet weak var countResetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.attachView(self)
-    }
-
-    @IBAction func countUpButton(_ sender: UIButton) {
-        presenter.incrementCount()
+        setupViewModel()
     }
     
-    @IBAction func countDownButton(_ sender: UIButton) {
-        presenter.decrementCount()
-    }
-    
-    @IBAction func countResetButton(_ sender: UIButton) {
-        presenter.resetCount()
-    }
-}
-
-extension ViewController: CounterDelegate {
-    
-    func updateCount(count: Int) {
-        countLabel.text = String(count)
+    private func setupViewModel() {
+        viewModel = CounterViewModel()
+        
+        let input = CounterViewModelInput(countUpButton: countUpButton.rx.tap.asObservable(),
+                                          countDownButton: countDownButton.rx.tap.asObservable(),
+                                          countResetButton: countResetButton.rx.tap.asObservable())
+        viewModel.setup(input: input)
+        
+        viewModel.outputs?.counterText
+            .drive(countLabel.rx.text)
+            .disposed(by: disposeBag)
     }
 }
