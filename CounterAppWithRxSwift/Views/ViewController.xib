@@ -10,7 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="CounterAppWithRxSwift" customModuleProvider="target">
             <connections>
+                <outlet property="countDownButton" destination="QpJ-RC-pN9" id="NbF-0R-kmq"/>
                 <outlet property="countLabel" destination="hlR-gy-s4r" id="qsS-EN-kmg"/>
+                <outlet property="countResetButton" destination="Cu5-T3-yei" id="YFE-rc-uIx"/>
+                <outlet property="countUpButton" destination="4AF-pH-tYQ" id="jUx-bN-rAi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Ffl-Qc-1zh"/>
             </connections>
         </placeholder>
@@ -20,9 +23,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlR-gy-s4r">
-                    <rect key="frame" x="177" y="294" width="60" height="30"/>
+                    <rect key="frame" x="157" y="294" width="100" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="hlR-gy-s4r" secondAttribute="height" multiplier="2:1" id="RBM-vT-qnE"/>
+                        <constraint firstAttribute="width" constant="100" id="cXu-wj-t8k"/>
                         <constraint firstAttribute="height" constant="30" id="nuV-d1-qce"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
@@ -35,9 +38,6 @@
                         <constraint firstAttribute="width" secondItem="4AF-pH-tYQ" secondAttribute="height" multiplier="18:5" id="hgQ-Cf-Brj"/>
                     </constraints>
                     <state key="normal" title="カウントアップ"/>
-                    <connections>
-                        <action selector="countUpButton:" destination="-1" eventType="touchUpInside" id="i1d-kh-LQe"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpJ-RC-pN9">
                     <rect key="frame" x="153" y="436" width="108" height="30"/>
@@ -45,9 +45,6 @@
                         <constraint firstAttribute="width" secondItem="QpJ-RC-pN9" secondAttribute="height" multiplier="18:5" id="kUz-Te-2eP"/>
                     </constraints>
                     <state key="normal" title="カウントダウン"/>
-                    <connections>
-                        <action selector="countDownButton:" destination="-1" eventType="touchUpInside" id="ccy-wi-Qhm"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cu5-T3-yei">
                     <rect key="frame" x="176" y="488" width="62" height="30"/>
@@ -55,9 +52,6 @@
                         <constraint firstAttribute="width" secondItem="Cu5-T3-yei" secondAttribute="height" multiplier="31:15" id="i5z-2v-UtJ"/>
                     </constraints>
                     <state key="normal" title="リセット"/>
-                    <connections>
-                        <action selector="countResetButton:" destination="-1" eventType="touchUpInside" id="AIs-SG-4wH"/>
-                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
