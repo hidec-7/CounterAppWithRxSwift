@@ -42,21 +42,21 @@ class CounterViewModel: CounterViewModelType {
     
     func setup(input: CounterViewModelInput) {
         input.countUpButton
-            .subscribe { [weak self] in
+            .subscribe(onNext: { [weak self] in
                 self?.incrementCount()
-            }
+            })
             .disposed(by: disposeBag)
 
         input.countDownButton
-            .subscribe { [weak self] in
+            .subscribe(onNext: { [weak self] in
                 self?.decrementCount()
-            }
+            })
             .disposed(by: disposeBag)
         
         input.countResetButton
-            .subscribe { [weak self] in
+            .subscribe(onNext: { [weak self] in
                 self?.resetCount()
-            }
+            })
             .disposed(by: disposeBag)
     }
 
@@ -80,7 +80,7 @@ extension CounterViewModel: CounterViewModelOutput {
     var counterText: Driver<String?> {
         return countRelay
             .map {
-                "Rx: \($0)"
+                "\($0)"
             }
             .asDriver(onErrorJustReturn: nil)
     }
